@@ -53,24 +53,79 @@ The form is enclosed within an HTML `<form>` element with the `POST` method. It 
 ### Example Code Structure:
 
 ```html
-<fieldset>
-    <legend>Appointment Form</legend>
-    <form method="POST" action="">
-        <!-- Gender Selection -->
-        <label>Gender</label><br>
-        <input type="radio" value="male" name="gender" required /> Male 
-        <input type="radio" value="female" name="gender" required /> Female
-        <br><br>
-        <!-- Other Inputs -->
-        <label>Name</label><br>
-        <input type="text" pattern="[a-zA-Z]{3,40}" placeholder="Enter Your Name" name="uname" required />
-        <!-- Additional Fields -->
-        <label>Appointment Date</label><br>
-        <input type="date" name="appointment_date" required />
-        <!-- Submit Button -->
-        <button type="submit">Book Appointment</button>
-    </form>
-</fieldset>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Form</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Appointment Form</legend>
+        <form method="POST" action="">
+
+            <!-- Gender Selection -->
+            <label>Gender</label><br>
+            <input type="radio" value="male" name="gender" required /> Male 
+            <input type="radio" value="female" name="gender" required /> Female
+            <br><br>
+
+            <!-- Name Input -->
+            <label>Name</label><br>
+            <input type="text" pattern="[a-zA-Z]{3,40}" placeholder="Enter Your Name" name="uname" required />
+            <br><br>
+
+            <!-- Email Input -->
+            <label>Email</label><br>
+            <input type="email" placeholder="Enter Your Email" name="uemail" required />
+            <br><br>
+
+            <!-- Phone Input -->
+            <label>Phone</label><br>
+            <input type="tel" pattern="[0-9]{10}" title="Enter a valid phone number with 10 digits" placeholder="Enter Your Phone" name="uphone" required />
+            <br><br>
+
+            <!-- Message Textarea -->
+            <label>Message</label><br>
+            <textarea name="message" placeholder="Enter Your Message"></textarea>
+            <br><br>
+
+            <!-- Photo Input -->
+            <label>Photo</label><br>
+            <input type="file" name="photo" />
+            <br><br>
+
+            <!-- Country Selection -->
+            <label>Country</label><br>
+            <select name="country" required>
+                <option value="">----Select Country----</option>
+                <option value="India">India</option>
+                <option value="Aus">Australia</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="Canada">Canada</option>
+            </select>
+            <br><br>
+
+            <!-- Date Input -->
+            <label>Appointment Date</label><br>
+            <input type="date" name="appointment_date" required />
+            <br><br>
+
+            <!-- Time Input -->
+            <label>Appointment Time</label><br>
+            <input type="time" name="appointment_time" required />
+            <br><br>
+
+            <!-- Submit Button -->
+            <button type="submit">Book Appointment</button>
+           <!-- <input type="submit" value="Submit" /> -->
+
+        </form>
+    </fieldset>
+</body>
+</html>
 ```
 
 ## Contribution
